@@ -41,7 +41,9 @@ class WindowClass(QMainWindow, form_class) :
         print("Item Added")
 
     def deleteComboBoxItem(self) :
-        self.delidx = self.cmb_second.currentIndex()
+        self.delidx = self.cmb_second.currentIndex() # 현재 index 삭제
+        #self.delidx = self.cmb_second.count() - 1 # 마지막 item의 index에서 부터 삭제
+        print(self.delidx)
         self.cmb_Test.removeItem(self.delidx)
         self.cmb_second.removeItem(self.delidx)
         print("Item Deleted")
