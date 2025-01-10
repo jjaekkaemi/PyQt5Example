@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
-
+from PyQt5.QtGui import QTextCursor
 form_class = uic.loadUiType("textbrowserTest.ui")[0]
 
 class WindowClass(QMainWindow, form_class) :
@@ -25,10 +25,27 @@ class WindowClass(QMainWindow, form_class) :
         #Textbrowser에 있는 글자를 가져오는 메서드
         self.textbrow_Test.setPlainText("This is Textbrowser - Change Text")
 
-    def appendTextFunction(self) :
-        #self.Textbrowser이름.append()
-        #Textbrowser에 있는 글자를 가져오는 메서드
-        self.textbrow_Test.append("Append Text")
+
+    # def appendTextFunction(self) : #줄바꿈 후 텍스트 추가
+    #     #self.Textbrowser이름.append()
+    #     #Textbrowser에 있는 글자를 가져오는 메서드
+    #     self.textbrow_Test.append("Append Text")
+
+    # 기존 텍스트에 바로 붙이기기
+    # def appendTextFunction(self) :
+    #     self.textbrow_Test.insertPlainText("Append Text")
+    
+    # def appendTextFunction(self):
+    #     # 현재 텍스트 가져오기
+    #     current_text = self.textbrow_Test.toPlainText()
+        
+    #     # 새로운 텍스트를 기존 텍스트에 바로 붙이기
+    #     self.textbrow_Test.setPlainText(current_text + " Append Text")
+
+
+    def appendTextFunction(self):
+        self.textbrow_Test.moveCursor(QTextCursor.End)  # 커서를 끝으로 자동 이동
+        self.textbrow_Test.insertPlainText("Append Text")
 
     def clearTextFunction(self) :
         #self.Textbrowser.clear()
