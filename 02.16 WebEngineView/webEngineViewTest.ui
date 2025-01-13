@@ -13,22 +13,22 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWebEngineView" name="webEngineView_Test">
+  <widget class="QWebEngineView" name="webEngineView_Test" native="true">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>891</width>
-     <height>571</height>
+     <width>301</width>
+     <height>211</height>
     </rect>
    </property>
-   <property name="url">
+   <property name="url" stdset="0">
     <url>
      <string>https://wikidocs.net/book/2944</string>
     </url>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -50,7 +50,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>440</x>
