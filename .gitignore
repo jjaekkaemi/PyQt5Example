@@ -1,0 +1,15 @@
+.DS_Store
+
+# IDE-specific files
+.vscode/
+.idea/
+*.iml
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment directories
+venv/
+env/
